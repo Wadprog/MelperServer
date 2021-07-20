@@ -10,5 +10,5 @@ router
   .route('/:storeId/products')
   .post(store.addProduct)
   .get(store.getProducts);
-  
+router.get('/food', store.test);
 module.exports = router;

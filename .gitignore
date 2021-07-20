@@ -1,5 +1,9 @@
 node_modules
 node_modules/
+seed/
+Seed/
 .env 
 ./.env
 /.env
+
+public/assets

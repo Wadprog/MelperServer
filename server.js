@@ -34,7 +34,8 @@ connectDB();
 app.use('/auth', require('./routes/auth'));
 app.use('/user', require('./routes/user'));
 app.use('/market', isLoggedIn, require('./routes/market'));
-app.use('/store', isLoggedIn, require('./routes/store'));
+//app.use('/store', isLoggedIn, require('./routes/store'));
+app.use('/store', require('./routes/store'));
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, _next) => {
