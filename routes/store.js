@@ -11,4 +11,6 @@ router
   .post(store.addProduct)
   .get(store.getProducts);
 router.get('/food', store.test);
+router.get('/secondHand', store.secondHand);
+router.get('/Clothes', store.clothes);
 module.exports = router;

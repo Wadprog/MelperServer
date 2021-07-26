@@ -12,9 +12,10 @@ const { catchAsync } = require('../helper');
 const { JWT_SECRET } = require('../config');
 
 module.exports.login = catchAsync(async (req, res) => {
-  const { username, pin } = req.body;
+  console.log(req.body.email);
+  const { email, pin } = req.body;
 
-  const user = await User.findOne({ username });
+  const user = await User.findOne({ email });
   if (!user) throw new AppError(Errors.InvalidCredentials, 400);
 
   const isMatch = await bcrypt.compare(pin, user.pin);
@@ -27,4 +28,3 @@ module.exports.login = catchAsync(async (req, res) => {
     return res.json({ token });
   });
 });
-

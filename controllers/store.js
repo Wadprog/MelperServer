@@ -5,6 +5,8 @@ const Errors = require('../errors/errors');
 const Store = require('../database/store');
 
 const resData = require('../Seed/resData');
+const secondHand = require('../Seed/secondHand');
+const clothes = require('../Seed/clothes');;
 // const Market = require('../database/market');
 
 module.exports.getAll = catchAsync(async (req, res) => {
@@ -32,4 +34,13 @@ module.exports.getProducts = catchAsync(async (req, res) => {
   if (!store) throw new AppError(Errors.DataNotFound, 404);
   return res.json(store.products);
 });
-module.exports.test = catchAsync(async (req, res) => res.json(resData));
+module.exports.test = catchAsync(async (req, res) =>
+  res.json({ name: 'food', data: resData })
+);
+
+module.exports.secondHand = catchAsync(async (req, res) =>
+  res.json({ name: 'secondHand', data: secondHand })
+);
+module.exports.clothes = catchAsync(async (req, res) =>
+  res.json({ name: 'Clothes', data: clothes })
+);

@@ -30,12 +30,19 @@ app.use(methodOverride('_method'));
 // connecting to database
 connectDB();
 
+app.use((req, res, next,) => {
+  console.log('Logging path: ');
+  console.log({ path: req.path });
+  next();
+});
+
 // Serving the routes
 app.use('/auth', require('./routes/auth'));
 app.use('/user', require('./routes/user'));
-app.use('/market', isLoggedIn, require('./routes/market'));
+//app.use('/market', isLoggedIn, require('./routes/market'));
 //app.use('/store', isLoggedIn, require('./routes/store'));
 app.use('/store', require('./routes/store'));
+app.use('/market', require('./routes/market'));
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, _next) => {

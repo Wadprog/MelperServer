@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const marketSchema = mongoose.Schema({
+  app: { type: String, default: 'FoodStore' },
   dateAdded: { type: Date, default: Date.now },
   name: {},
   icon: {},
