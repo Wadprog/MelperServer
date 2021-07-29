@@ -30,7 +30,7 @@ app.use(methodOverride('_method'));
 // connecting to database
 connectDB();
 
-app.use((req, res, next,) => {
+app.use((req, res, next) => {
   console.log('Logging path: ');
   console.log({ path: req.path });
   next();
@@ -43,7 +43,7 @@ app.use('/user', require('./routes/user'));
 //app.use('/store', isLoggedIn, require('./routes/store'));
 app.use('/store', require('./routes/store'));
 app.use('/market', require('./routes/market'));
-
+app.use('/payments', require('./routes/payments'));
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, _next) => {
   const { status = 500, message = Errors.unHandledServerError, ...rest } = err;
