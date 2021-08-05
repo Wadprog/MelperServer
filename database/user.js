@@ -10,6 +10,10 @@ const userSchema = mongoose.Schema({
   profileImage: String,
   pin: { type: String, require: true },
   username: { type: String, require: true },
+  homeLocation: {
+    longitude: { type: Number },
+    latitude: { type: Number },
+  },
 });
 
 userSchema.virtual('fullName').get(function () {
