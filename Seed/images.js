@@ -151,9 +151,24 @@ const tomato_pasta = {
 };
 
 const sofa = 'assets/images/sofa.png';
-const redChair = 'assets/images/red_chair.png';
-const greenChair = 'assets/images/green_chair.png';
-const whiteChair = 'assets/images/white_chair.png';
+const redChair = {
+  original:
+    'https://res.cloudinary.com/dnesmf7ah/image/upload/v1628212438/melperMedia/red_chair_prt84c.png',
+  thumbnail:
+    'https://res.cloudinary.com/dnesmf7ah/image/upload/c_thumb,w_200,g_face/v1628212438/melperMedia/red_chair_prt84c.png',
+};
+const greenChair = {
+  original:
+    'https://res.cloudinary.com/dnesmf7ah/image/upload/v1628212421/melperMedia/green_chair_zna5bd.png',
+
+  thumbnail:
+    'https://res.cloudinary.com/dnesmf7ah/image/upload/c_thumb,w_200,g_face/v1628212421/melperMedia/green_chair_zna5bd.png',
+};
+const whiteChair = {
+  original:
+    'https://res.cloudinary.com/dnesmf7ah/image/upload/v1628212428/melperMedia/white_chair_svw8xl.png',
+    thumbnail:'https://res.cloudinary.com/dnesmf7ah/image/upload/c_thumb,w_200,g_face/v1628212428/melperMedia/white_chair_svw8xl.png'
+};
 const nikePegasus36 = 'assets/images/nike-pegasus-36.png';
 const nikeMetcon5Black = 'assets/images/nike-metcon-5-black.png';
 const nikeZoomKobe1Proto = 'assets/images/nike-zoom-kobe-1-protro.png';
